@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>UsuarioS</servlet-name>
+        <servlet-class>DAO.UsuarioS</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserL</servlet-name>
+        <servlet-class>Servlet.UserL</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ArticuloC</servlet-name>
+        <servlet-class>Controlador.ControladorArt</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorMov</servlet-name>
+        <servlet-class>Controlador.ControladorMov</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UsuarioS</servlet-name>
+        <url-pattern>/UsuarioS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserL</servlet-name>
+        <url-pattern>/UserL</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArticuloC</servlet-name>
+        <url-pattern>/ArticuloC</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorMov</servlet-name>
+        <url-pattern>/ControladorMov</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
