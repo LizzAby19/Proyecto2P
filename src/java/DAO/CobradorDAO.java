@@ -29,7 +29,7 @@ public class CobradorDAO implements CrudCobrador {
     @Override
     public List listar() {
         ArrayList<Cobrador> list = new ArrayList<>();
-        String sql = "select * from proyecto.COBRADOR";
+        String sql = "select * from COBRADOR";
         try {
             con = cn.getConnection();
             System.out.println(sql);
@@ -52,7 +52,7 @@ public class CobradorDAO implements CrudCobrador {
 
     @Override
     public Cobrador list(int id) {
-        String sql = "select * from proyecto.cobrador where ID_COB=" + id;
+        String sql = "select * from COBRADOR where ID_COB=" + id;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -72,7 +72,7 @@ public class CobradorDAO implements CrudCobrador {
 
     @Override
     public boolean add(Cobrador cob) {
-        String sql = "insert into proyecto.cobrador(CEDULA_COB, NOMBRE_COB, DIRECCION_COB) "
+        String sql = "insert into COBRADOR(CEDULA_COB, NOMBRE_COB, DIRECCION_COB) "
                 + "values('" + cob.getCedula()+ "','" + cob.getNombre()+ "','" + cob.getDireccion()+ "')";
         try {
             con = cn.getConnection();
@@ -88,7 +88,7 @@ public class CobradorDAO implements CrudCobrador {
 
     @Override
     public boolean edit(Cobrador cob) {
-        String sql = "update proyecto.articulo set CEDULA_COB='" + cob.getCedula() + "', NOMBRE_COB='" + cob.getNombre() + "', DIRECCION_COB='" + cob.getDireccion() + "'where ID_COB=" + cob.getId();
+        String sql = "update COBRADOR set CEDULA_COB='" + cob.getCedula() + "', NOMBRE_COB='" + cob.getNombre() + "', DIRECCION_COB='" + cob.getDireccion() + "'where ID_COB=" + cob.getId();
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -103,7 +103,7 @@ public class CobradorDAO implements CrudCobrador {
 
     @Override
     public boolean eliminar(int id) {
-        String sql = "delete from proyecto.cobrador where ID_COB=" + id;
+        String sql = "delete from COBRADOR where ID_COB=" + id;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);

@@ -59,7 +59,7 @@
         
         <div class="container">
             <div class="col-lg-6">
-                <h1>Agregar Articulo</h1>
+                <h1>Agregar Cobrador</h1>
                 <form action="ControladorCobrador">
                     Cédula<br>
                     <input class="form-control" type="text" name="txtCedula"><br>

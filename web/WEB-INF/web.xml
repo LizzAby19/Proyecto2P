@@ -24,6 +24,10 @@
         <servlet-name>ControladorFormaPago</servlet-name>
         <servlet-class>Controlador.ControladorFormaPago</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorCuenta</servlet-name>
+        <servlet-class>Controlador.ControladorCuenta</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioS</servlet-name>
         <url-pattern>/UsuarioS</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>ControladorFormaPago</servlet-name>
         <url-pattern>/ControladorFormaPago</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCuenta</servlet-name>
+        <url-pattern>/ControladorCuenta</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

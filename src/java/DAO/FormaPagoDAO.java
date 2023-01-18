@@ -31,7 +31,7 @@ public class FormaPagoDAO implements CrudFormaPago {
     @Override
     public List listar() {
         ArrayList<FormaPago> list = new ArrayList<>();
-        String sql = "select * from proyecto.FORMA_PAGO";
+        String sql = "select * from FORMA_PAGO";
         try {
             con = cn.getConnection();
             System.out.println(sql);
@@ -53,7 +53,7 @@ public class FormaPagoDAO implements CrudFormaPago {
 
     @Override
     public FormaPago list(int id) {
-        String sql = "select * from proyecto.FORMA_PAGO where ID_FOR=" + id;
+        String sql = "select * from FORMA_PAGO where ID_FOR=" + id;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -73,7 +73,7 @@ public class FormaPagoDAO implements CrudFormaPago {
     @Override
     public boolean add(FormaPago payment) {
         String codigoEncriptado = WSAG_Seguridad.WSAG_Encriptar(payment.getCodigo());
-        String sql = "insert into proyecto.FORMA_PAGO(CODIGO_FOR, NOMBRE_FOR) "
+        String sql = "insert into FORMA_PAGO(CODIGO_FOR, NOMBRE_FOR) "
                 + "values('" + codigoEncriptado + "','" + payment.getNombre()+ "')";
         try {
             con = cn.getConnection();
@@ -90,7 +90,7 @@ public class FormaPagoDAO implements CrudFormaPago {
     @Override
     public boolean edit(FormaPago art) {
         String codigoEncriptado = WSAG_Seguridad.WSAG_Encriptar(art.getCodigo());
-        String sql = "update proyecto.FORMA_PAGO set CODIGO_FOR='" + codigoEncriptado + "', NOMBRE_FOR='" + art.getNombre() + "'where ID_FOR=" + art.getId();
+        String sql = "update FORMA_PAGO set CODIGO_FOR='" + codigoEncriptado + "', NOMBRE_FOR='" + art.getNombre() + "'where ID_FOR=" + art.getId();
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -105,7 +105,7 @@ public class FormaPagoDAO implements CrudFormaPago {
 
     @Override
     public boolean eliminar(int id) {
-        String sql = "delete from proyecto.FORMA_PAGO where ID_FOR=" + id;
+        String sql = "delete from FORMA_PAGO where ID_FOR=" + id;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);

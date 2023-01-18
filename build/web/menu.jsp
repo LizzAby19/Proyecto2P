@@ -47,7 +47,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/Proyecto2P/listarFormaPago.jsp">Forma de pago</a></li>
                                     <li><a class="dropdown-item" href="/Proyecto2P/listarCobrador.jsp">Cobrador</a></li>
-                                    <li><a class="dropdown-item" href="">Cuentas por cobrar </a></li>
+                                    <li><a class="dropdown-item" href="/Proyecto2P/listarCuenta.jsp">Cuentas por cobrar </a></li>
                                     <li><a class="dropdown-item" href="">Reporte</a></li>
                                 </ul>
                             </li>

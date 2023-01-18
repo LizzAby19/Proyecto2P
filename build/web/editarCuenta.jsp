@@ -1,17 +1,18 @@
 <%-- 
-    Document   : editar
-    Created on : 16/01/2023, 17:09:46
+    Document   : editarCuenta
+    Created on : 18/01/2023, 17:17:36
     Author     : Usuario
 --%>
 
-<%@page import="Modelo.Cobrador"%>
-<%@page import="DAO.CobradorDAO"%>
+
+<%@page import="Modelo.Cuenta"%>
+<%@page import="DAO.CuentaDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Editar Cobrador</title>
+        <title>Cuentas por Cobrar</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"></link>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
@@ -49,7 +50,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/Proyecto2P/listarFormaPago.jsp">Forma de pago</a></li>
                                     <li><a class="dropdown-item" href="/Proyecto2P/listarCobrador.jsp">Cobrador</a></li>
-                                    <li><a class="dropdown-item" href="">Cuentas por cobrar </a></li>
+                                    <li><a class="dropdown-item" href="/Proyecto2P/listarCuenta.jsp">Cuentas por cobrar </a></li>
                                     <li><a class="dropdown-item" href="">Reporte</a></li>
                                 </ul>
                             </li>
@@ -62,21 +63,21 @@
         <div class="container">
             <div class="col-lg-6">
               <%
-              CobradorDAO dao=new CobradorDAO();
-              int id=Integer.parseInt((String)request.getAttribute("idCob"));
-              Cobrador p=(Cobrador)dao.list(id);
+              CuentaDAO dao=new CuentaDAO();
+              int id=Integer.parseInt((String)request.getAttribute("idCue"));
+              Cuenta p=(Cuenta)dao.list(id);
           %>
-            <h1>Modificar Cobrador</h1>
-            <form action="ControladorCobrador">
+            <h1>Modificar Forma de Pago</h1>
+            <form action="ControladorCuenta">
                 <input class="form-control" type="hidden" name="txtId" value="<%= p.getId()%>" ><br>
-                Cédula <br>
-                <input class="form-control" type="text" name="txtCedula" value="<%= p.getCedula() %>" ><br>
-                Nombre: <br>
-                <input class="form-control" type="text" name="txtNombre" value="<%= p.getNombre()%>"><br>
-                Dirección: <br>
-                <input class="form-control" type="text" name="txtDireccion" value="<%= p.getDireccion() %>"><br>
+                Factura: <br>
+                <input class="form-control" type="text" name="txtIdFactura" value="<%= p.getIdFactura()%>" ><br>
+                Estado: <br>
+                <input class="form-control" type="text" name="txtEstado" value="<%= p.getEstado()%>"><br>
+                Fecha: <br>
+                <input class="form-control" type="text" name="txtFecha" value="<%= p.getFecha()%>"><br>
                 <input class="btn btn-primary" type="submit" name="accion" value="Actualizar"> 
-                <a href="listarCobrador.jsp">Regresar</a>
+                <a href="listarCuenta.jsp">Regresar</a>
             </form>
           </div>
         </div>

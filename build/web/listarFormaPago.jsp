@@ -63,7 +63,6 @@
         </div>
         
         <h1 style="text-align: center">Forma de Pago</h1>
-        <!--<h2 style="text-align: center">Normal</h2>-->
         <div class="container">
             <a class="btn btn-success" href="crearFormaPago.jsp">Agregar Nuevo</a>
             <br><br>
@@ -98,7 +97,5 @@
                 </tbody>
             </table>
         </div>
-                
-        <!-- Desencriptado -->
     </body>
 </html>

@@ -1,17 +1,15 @@
 <%-- 
-    Document   : editar
-    Created on : 16/01/2023, 17:09:46
+    Document   : crearCuenta
+    Created on : 18/01/2023, 17:17:17
     Author     : Usuario
 --%>
 
-<%@page import="Modelo.Cobrador"%>
-<%@page import="DAO.CobradorDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Editar Cobrador</title>
+        <title>Forma de pago</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"></link>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
@@ -49,7 +47,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/Proyecto2P/listarFormaPago.jsp">Forma de pago</a></li>
                                     <li><a class="dropdown-item" href="/Proyecto2P/listarCobrador.jsp">Cobrador</a></li>
-                                    <li><a class="dropdown-item" href="">Cuentas por cobrar </a></li>
+                                    <li><a class="dropdown-item" href="/Proyecto2P/listarCuenta.jsp">Cuentas por cobrar </a></li>
                                     <li><a class="dropdown-item" href="">Reporte</a></li>
                                 </ul>
                             </li>
@@ -61,24 +59,18 @@
         
         <div class="container">
             <div class="col-lg-6">
-              <%
-              CobradorDAO dao=new CobradorDAO();
-              int id=Integer.parseInt((String)request.getAttribute("idCob"));
-              Cobrador p=(Cobrador)dao.list(id);
-          %>
-            <h1>Modificar Cobrador</h1>
-            <form action="ControladorCobrador">
-                <input class="form-control" type="hidden" name="txtId" value="<%= p.getId()%>" ><br>
-                Cédula <br>
-                <input class="form-control" type="text" name="txtCedula" value="<%= p.getCedula() %>" ><br>
-                Nombre: <br>
-                <input class="form-control" type="text" name="txtNombre" value="<%= p.getNombre()%>"><br>
-                Dirección: <br>
-                <input class="form-control" type="text" name="txtDireccion" value="<%= p.getDireccion() %>"><br>
-                <input class="btn btn-primary" type="submit" name="accion" value="Actualizar"> 
-                <a href="listarCobrador.jsp">Regresar</a>
-            </form>
-          </div>
+                <h1>Agregar Cuenta por cobrar</h1>
+                <form action="ControladorCuenta">
+                    Factura: <br>
+                    <input class="form-control" type="text" name="txtIdFactura"><br>
+                    Estado: <br>
+                    <input class="form-control" type="text" name="txtEstado"><br>
+                    Fecha <br>
+                    <input class="form-control" type="text" name="txtFecha"><br>
+                    <input class="btn btn-primary" type="submit" name="accion" value="Agregar">
+                    <a href="listarCuenta.jsp">Regresar</a>
+                </form>
+            </div>
         </div>
     </body>
 </html>

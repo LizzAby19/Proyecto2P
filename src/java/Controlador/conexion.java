@@ -19,12 +19,12 @@ import java.sql.Statement;
 public class conexion {
     PreparedStatement ps=null;
     public static Connection conectar() {
-        String driver = "com.mysql.jdbc.Driver";
+        String driver = "com.mysql.cj.jdbc.Driver";
         String user = "root";
         // String pass = "Espe.2022";
-        String pass = "123456";
+        String pass = "GommNcRgTXROuwJrJFKv";
         // String url = "jdbc:mysql://localhost:3306/proyecto";
-        String url = "jdbc:mysql://localhost:3309/proyecto?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false&autoReconnect=true";
+        String url = "jdbc:mysql://containers-us-west-52.railway.app:5815/railway?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false&autoReconnect=true";
         Connection con = null;
         try {
             Class.forName(driver);
@@ -61,12 +61,12 @@ public class conexion {
     
     Connection con;
     public  conexion(){
-        String driver = "com.mysql.jdbc.Driver";
+        String driver = "com.mysql.cj.jdbc.Driver";
         String user = "root";
         // String pass = "Espe.2022";
-        String pass = "123456";
+        String pass = "GommNcRgTXROuwJrJFKv";
         // String url = "jdbc:mysql://localhost:3306/proyecto";
-        String url = "jdbc:mysql://localhost:3309/proyecto?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false&autoReconnect=true";
+        String url = "jdbc:mysql://containers-us-west-52.railway.app:5815/railway?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false&autoReconnect=true";
         Connection con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -77,15 +77,15 @@ public class conexion {
     }
     
     public Connection getConnection(){
-        String driver = "com.mysql.jdbc.Driver";
+        String driver = "com.mysql.cj.jdbc.Driver";
         String user = "root";
         // String pass = "Espe.2022";
-        String pass = "123456";
+        String pass = "GommNcRgTXROuwJrJFKv";
         // String url = "jdbc:mysql://localhost:3306/proyecto";
-        String url = "jdbc:mysql://localhost:3309/proyecto?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false&autoReconnect=true";
+        String url = "jdbc:mysql://containers-us-west-52.railway.app:5815/railway?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false&autoReconnect=true";
         Connection con = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con=DriverManager.getConnection(url, user, pass);
             return con;
         } catch (Exception e) {

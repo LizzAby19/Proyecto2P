@@ -29,7 +29,7 @@ public class ArticuloDAO implements crudArt {
     @Override
     public List listar() {
         ArrayList<Articulo> list = new ArrayList<>();
-        String sql = "select*from proyecto.articulo";
+        String sql = "select*from ARTICULO";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -50,7 +50,7 @@ public class ArticuloDAO implements crudArt {
 
     @Override
     public Articulo list(int id) {
-        String sql = "select * from proyecto.articulo where id_art=" + id;
+        String sql = "select * from ARTICULO where id_art=" + id;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -69,7 +69,7 @@ public class ArticuloDAO implements crudArt {
 
     @Override
     public boolean add(Articulo art) {
-        String sql = "insert into proyecto.articulo(nombre_art, precio_art, stock_art)values('" + art.getNombre_Articulo() + "','" + art.getPrecio_Articulo() + "','" + art.getStock_Articulo() + "')";
+        String sql = "insert into ARTICULO(nombre_art, precio_art, stock_art)values('" + art.getNombre_Articulo() + "','" + art.getPrecio_Articulo() + "','" + art.getStock_Articulo() + "')";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
