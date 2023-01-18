@@ -16,6 +16,14 @@
         <servlet-name>ControladorMov</servlet-name>
         <servlet-class>Controlador.ControladorMov</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorCobrador</servlet-name>
+        <servlet-class>Controlador.ControladorCobrador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorFormaPago</servlet-name>
+        <servlet-class>Controlador.ControladorFormaPago</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioS</servlet-name>
         <url-pattern>/UsuarioS</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>ControladorMov</servlet-name>
         <url-pattern>/ControladorMov</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCobrador</servlet-name>
+        <url-pattern>/ControladorCobrador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorFormaPago</servlet-name>
+        <url-pattern>/ControladorFormaPago</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

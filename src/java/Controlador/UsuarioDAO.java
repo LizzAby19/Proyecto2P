@@ -7,17 +7,17 @@ package Controlador;
 
 import Modelo.Usuario;
 import java.sql.Connection;
-import Controlador.conexion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 
 /**
  *
  * @author Liiz
  */
 @WebServlet(name = "UsuarioDAO", urlPatterns = {"/UsuarioDAO"})
-public class UsuarioDAO {
+public class UsuarioDAO extends HttpServlet {
 
     public static ResultSet rs;
 

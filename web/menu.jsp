@@ -43,11 +43,11 @@
                         </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventario</a>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cuentas por cobrar</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="">Articulo</a></li>
-                                    <li><a class="dropdown-item" href="">Tipo Movimiento</a></li>
-                                    <li><a class="dropdown-item" href="">Compleja </a></li>
+                                    <li><a class="dropdown-item" href="/Proyecto2P/listarFormaPago.jsp">Forma de pago</a></li>
+                                    <li><a class="dropdown-item" href="/Proyecto2P/listarCobrador.jsp">Cobrador</a></li>
+                                    <li><a class="dropdown-item" href="">Cuentas por cobrar </a></li>
                                     <li><a class="dropdown-item" href="">Reporte</a></li>
                                 </ul>
                             </li>

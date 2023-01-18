@@ -21,8 +21,10 @@ public class conexion {
     public static Connection conectar() {
         String driver = "com.mysql.jdbc.Driver";
         String user = "root";
-        String pass = "Espe.2022";
-        String url = "jdbc:mysql://localhost:3306/proyecto";
+        // String pass = "Espe.2022";
+        String pass = "123456";
+        // String url = "jdbc:mysql://localhost:3306/proyecto";
+        String url = "jdbc:mysql://localhost:3309/proyecto?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false&autoReconnect=true";
         Connection con = null;
         try {
             Class.forName(driver);
@@ -56,16 +58,39 @@ public class conexion {
     public void desconectar() throws SQLException{
     conectar().close();
     }
+    
     Connection con;
     public  conexion(){
+        String driver = "com.mysql.jdbc.Driver";
+        String user = "root";
+        // String pass = "Espe.2022";
+        String pass = "123456";
+        // String url = "jdbc:mysql://localhost:3306/proyecto";
+        String url = "jdbc:mysql://localhost:3309/proyecto?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false&autoReconnect=true";
+        Connection con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto","root","Espe.2022");            
+            con=DriverManager.getConnection(url, user, pass);            
         } catch (Exception e) {
             System.err.println("Error"+e);
         }
     }
+    
     public Connection getConnection(){
-        return con;
+        String driver = "com.mysql.jdbc.Driver";
+        String user = "root";
+        // String pass = "Espe.2022";
+        String pass = "123456";
+        // String url = "jdbc:mysql://localhost:3306/proyecto";
+        String url = "jdbc:mysql://localhost:3309/proyecto?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false&autoReconnect=true";
+        Connection con = null;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con=DriverManager.getConnection(url, user, pass);
+            return con;
+        } catch (Exception e) {
+            System.err.println("Error"+e);
+        }
+        return null;
     }
 }
