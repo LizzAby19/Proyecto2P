@@ -20,17 +20,9 @@
                 <div class="container-fluid col-3">
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventario</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="http://localhost:8080/Proyecto2P/listar.jsp">Articulo</a></li>
-                                    <li><a class="dropdown-item" href="http://localhost:8080/Proyecto2P/listarMov.jsp">Tipo Movimiento</a></li>
-                                    <li><a class="dropdown-item" href="">Compleja </a></li>
-                                    <li><a class="dropdown-item" href="">Reporte</a></li>
-                                </ul>
-                            </li>
+                           
                         </ul>
-                        <ul class="navbar-nav">
+                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventario</a>
                                 <ul class="dropdown-menu">
@@ -43,15 +35,27 @@
                         </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventario</a>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Facturacion</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="">Articulo</a></li>
-                                    <li><a class="dropdown-item" href="">Tipo Movimiento</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost:8080/Proyecto2P/listarCli.jsp">Cliente</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost:8080/Proyecto2P/listarCiu.jsp">Ciudad</a></li>
                                     <li><a class="dropdown-item" href="">Compleja </a></li>
                                     <li><a class="dropdown-item" href="">Reporte</a></li>
                                 </ul>
                             </li>
                         </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventario</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="http://localhost:8080/Proyecto2P/listarCli.jsp">Articulo</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost:8080/Proyecto2P/listarCiu.jsp">Tipo Movimiento</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost:8080/Proyecto2P/listarFac.jsp">Compleja </a></li>
+                                    <li><a class="dropdown-item" href="">Reporte</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                         
                     </div>
                 </div>
             </nav>

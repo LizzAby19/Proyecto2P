@@ -9,12 +9,12 @@
         <servlet-class>Servlet.UserL</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ArticuloC</servlet-name>
-        <servlet-class>Controlador.ControladorArt</servlet-class>
+        <servlet-name>ClienteC</servlet-name>
+        <servlet-class>Controlador.ControladorCli</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ControladorMov</servlet-name>
-        <servlet-class>Controlador.ControladorMov</servlet-class>
+        <servlet-name>ControladorCiu</servlet-name>
+        <servlet-class>Controlador.ControladorCiu</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioS</servlet-name>
@@ -25,12 +25,12 @@
         <url-pattern>/UserL</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ArticuloC</servlet-name>
-        <url-pattern>/ArticuloC</url-pattern>
+        <servlet-name>ClienteC</servlet-name>
+        <url-pattern>/ClienteC</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ControladorMov</servlet-name>
-        <url-pattern>/ControladorMov</url-pattern>
+        <servlet-name>ControladorCiu</servlet-name>
+        <url-pattern>/ControladorCiu</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

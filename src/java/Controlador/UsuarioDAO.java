@@ -25,7 +25,7 @@ public class UsuarioDAO {
         int est = 0;
         try {
             Connection con = conexion.conectar();
-            String sql = "insert into proyecto.usuario (usuario_usu, clave_usu) values (?,?)";
+            String sql = "insert into USUARIO (usuario_usu, clave_usu) values (?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, u.getUsuario());
             ps.setString(2, u.getPassword());

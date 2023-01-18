@@ -23,8 +23,10 @@ public class LoginDAO {
     conexion cn=new conexion();
     
     public int validarLogin(Usuario tm) throws Exception{
-        sql="SELECT COUNT(id_usu) AS CANTIDAD FROM proyecto.usuario WHERE USUARIO_USU='"+tm.getUsuario()+"' AND CLAVE_USU='"+tm.getPassword()+"'";
+        sql="SELECT COUNT(id_usu) AS CANTIDAD FROM USUARIO WHERE USUARIO_USU='"+tm.getUsuario()+"' AND CLAVE_USU='"+tm.getPassword()+"'";
+        System.out.println(sql);
         rs=cn.ejecutarConsulta(sql);
+        
         while(rs.next()){
             rspta=rs.getInt("cantidad");
         }
