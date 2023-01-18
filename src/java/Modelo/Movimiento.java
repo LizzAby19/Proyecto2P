@@ -9,8 +9,7 @@ package Modelo;
  *
  * @author Liiz
  */
-
-public class Movimiento  {
+public class Movimiento {
 
     private String codigo;
     private String nombre;
@@ -18,7 +17,7 @@ public class Movimiento  {
 
     public Movimiento() {
     }
-     
+
     public String getCodigo() {
         return codigo;
     }
@@ -42,5 +41,11 @@ public class Movimiento  {
     public void setSigno(String signo) {
         this.signo = signo;
     }
+
+    public Movimiento(String codigo, String nombre, String signo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.signo = signo;
+    }
     
- }
+}
