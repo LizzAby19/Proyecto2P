@@ -17,6 +17,22 @@
         <servlet-class>Controlador.ControladorMov</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>ControladorCobrador</servlet-name>
+        <servlet-class>Controlador.ControladorCobrador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorFormaPago</servlet-name>
+        <servlet-class>Controlador.ControladorFormaPago</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorCuenta</servlet-name>
+        <servlet-class>Controlador.ControladorCuenta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorCuentaDetalle</servlet-name>
+        <servlet-class>Controlador.ControladorCuentaDetalle</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>ControladorInvC</servlet-name>
         <servlet-class>Controlador.ControladorInvC</servlet-class>
     </servlet>
@@ -39,6 +55,22 @@
     <servlet-mapping>
         <servlet-name>ControladorMov</servlet-name>
         <url-pattern>/ControladorMov</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCobrador</servlet-name>
+        <url-pattern>/ControladorCobrador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorFormaPago</servlet-name>
+        <url-pattern>/ControladorFormaPago</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCuenta</servlet-name>
+        <url-pattern>/ControladorCuenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCuentaDetalle</servlet-name>
+        <url-pattern>/ControladorCuentaDetalle</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ControladorInvC</servlet-name>
