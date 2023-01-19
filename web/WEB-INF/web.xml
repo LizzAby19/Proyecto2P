@@ -28,6 +28,10 @@
         <servlet-name>ControladorCuenta</servlet-name>
         <servlet-class>Controlador.ControladorCuenta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorCuentaDetalle</servlet-name>
+        <servlet-class>Controlador.ControladorCuentaDetalle</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioS</servlet-name>
         <url-pattern>/UsuarioS</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>ControladorCuenta</servlet-name>
         <url-pattern>/ControladorCuenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCuentaDetalle</servlet-name>
+        <url-pattern>/ControladorCuentaDetalle</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

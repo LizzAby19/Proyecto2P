@@ -1,15 +1,14 @@
 <%-- 
-    Document   : crearCuenta
-    Created on : 18/01/2023, 17:17:17
+    Document   : crearCuentaDetalle
+    Created on : 18/01/2023, 17:53:00
     Author     : Usuario
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cuenta</title>
+        <title>Cuenta detalle</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"></link>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
@@ -59,13 +58,17 @@
         
         <div class="container">
             <div class="col-lg-6">
-                <h1>Agregar Cuenta por cobrar</h1>
-                <form action="ControladorCuenta">
-                    Factura: <br>
-                    <input class="form-control" type="text" name="txtIdFactura"><br>
-                    Estado: <br>
-                    <input class="form-control" type="text" name="txtEstado"><br>
-                    Fecha <br>
+                <h1>Agregar Detalle</h1>
+                <form action="ControladorCuentaDetalle">
+                    Cuenta: <br>
+                    <input class="form-control" type="text" name="txtIdCuenta"><br>
+                    Cobrador: <br>
+                    <input class="form-control" type="text" name="txtIdCobrador"><br>
+                    Forma de pago <br>
+                    <input class="form-control" type="text" name="txtIdFormaPago"><br>
+                    Valor: <br>
+                    <input class="form-control" type="text" name="txtValor"><br>
+                    Fecha: <br>
                     <input class="form-control" type="text" name="txtFecha"><br>
                     <input class="btn btn-primary" type="submit" name="accion" value="Agregar">
                     <a href="listarCuenta.jsp">Regresar</a>

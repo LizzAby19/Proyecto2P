@@ -4,6 +4,8 @@
     Author     : Usuario
 --%>
 
+<%@page import="Modelo.CuentaDetalle"%>
+<%@page import="DAO.CuentaDetalleDAO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page import="Modelo.Cuenta"%>
@@ -91,6 +93,47 @@
                         <td class="text-center">
                             <a class="btn btn-warning" href="ControladorCuenta?accion=editar&id=<%= art.getId()%>">Editar</a>
                             <a class="btn btn-danger" href="ControladorCuenta?accion=eliminar&id=<%= art.getId()%>">Eliminar</a>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+                
+                <h1 style="text-align: center">Detalle Cuentas por cobrar</h1>
+        <div class="container">
+            <a class="btn btn-success" href="crearCuentaDetalle.jsp">Agregar Nuevo</a>
+            <br><br>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">Id</th>
+                        <th class="text-center">Cuenta</th>
+                        <th class="text-center">Cobrador</th>
+                        <th class="text-center">Forma de pago</th>
+                        <th class="text-center">Valor</th>
+                        <th class="text-center">Fecha</th>
+                    </tr>
+                </thead>
+                <%
+                    CuentaDetalleDAO daoDet = new CuentaDetalleDAO();
+                    List<CuentaDetalle> listDet = daoDet.listar();
+                    Iterator<CuentaDetalle> iterDet = listDet.iterator();
+                    CuentaDetalle artDet=null;
+                    while(iterDet.hasNext()){
+                        artDet = iterDet.next();
+                %>
+                <tbody>
+                    <tr>
+                        <td class="text-center"><%= artDet.getId()%></td>
+                        <td class="text-center"><%= artDet.getIdCuenta()%></td>
+                        <td class="text-center"><%= artDet.getIdCobrador()%></td>
+                        <td class="text-center"><%= artDet.getIfFormaPago()%></td>
+                        <td class="text-center"><%= artDet.getValor()%></td>
+                        <td class="text-center"><%= artDet.getFecha()%></td>
+                        <td class="text-center">
+                            <a class="btn btn-warning" href="ControladorCuentaDetalle?accion=editar&id=<%= artDet.getId()%>">Editar</a>
+                            <a class="btn btn-danger" href="ControladorCuentaDetalle?accion=eliminar&id=<%= artDet.getId()%>">Eliminar</a>
                         </td>
                     </tr>
                     <%}%>
