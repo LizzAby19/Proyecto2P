@@ -17,20 +17,12 @@
         <servlet-class>Controlador.ControladorMov</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ControladorCobrador</servlet-name>
-        <servlet-class>Controlador.ControladorCobrador</servlet-class>
+        <servlet-name>ControladorInvC</servlet-name>
+        <servlet-class>Controlador.ControladorInvC</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ControladorFormaPago</servlet-name>
-        <servlet-class>Controlador.ControladorFormaPago</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ControladorCuenta</servlet-name>
-        <servlet-class>Controlador.ControladorCuenta</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ControladorCuentaDetalle</servlet-name>
-        <servlet-class>Controlador.ControladorCuentaDetalle</servlet-class>
+        <servlet-name>ControladorDet</servlet-name>
+        <servlet-class>Controlador.ControladorDet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioS</servlet-name>
@@ -49,20 +41,12 @@
         <url-pattern>/ControladorMov</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ControladorCobrador</servlet-name>
-        <url-pattern>/ControladorCobrador</url-pattern>
+        <servlet-name>ControladorInvC</servlet-name>
+        <url-pattern>/ControladorInvC</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ControladorFormaPago</servlet-name>
-        <url-pattern>/ControladorFormaPago</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ControladorCuenta</servlet-name>
-        <url-pattern>/ControladorCuenta</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ControladorCuentaDetalle</servlet-name>
-        <url-pattern>/ControladorCuentaDetalle</url-pattern>
+        <servlet-name>ControladorDet</servlet-name>
+        <url-pattern>/ControladorDet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

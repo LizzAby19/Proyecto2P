@@ -83,7 +83,7 @@ public class ArticuloDAO implements crudArt {
 
     @Override
     public boolean edit(Articulo art) {
-        String sql = "update proyecto.articulo set nombre_art='" + art.getNombre_Articulo() + "',precio_art='" + art.getPrecio_Articulo() + "',stock_art='" + art.getStock_Articulo() + "'where id_art=" + art.getCodigo_Articulo();
+        String sql = "update ARTICULO set nombre_art='" + art.getNombre_Articulo() + "',precio_art='" + art.getPrecio_Articulo() + "',stock_art='" + art.getStock_Articulo() + "'where id_art=" + art.getCodigo_Articulo();
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -97,7 +97,7 @@ public class ArticuloDAO implements crudArt {
 
     @Override
     public boolean eliminar(int id) {
-        String sql = "delete from proyecto.articulo where id_art=" + id;
+        String sql = "delete from ARTICULO where id_art=" + id;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -109,4 +109,33 @@ public class ArticuloDAO implements crudArt {
         return false;
     }
 
+     public ArrayList<Articulo> mostrarArt() {
+        ArrayList<Articulo> lista = new ArrayList<>();
+        try {
+            String sql = "select * from ARTICULO";
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+
+            System.out.println(sql);
+            while (rs.next()) {
+                String cod = rs.getString("id_art");
+                String nombre = rs.getString("nombre_art");
+                String prec = rs.getString("precio_art");
+                String stock = rs.getString("stock_art");
+                
+                Articulo movd = new Articulo();
+                movd.setCodigo_Articulo(cod);
+                movd.setNombre_Articulo(nombre);
+                movd.setPrecio_Articulo(prec);
+                movd.setStock_Articulo(stock);
+                
+                lista.add(movd);
+            }
+        } catch (Exception e) {
+            System.out.println(e + "listM");
+        }
+
+        return lista;
+    }
 }

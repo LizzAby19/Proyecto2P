@@ -11,6 +11,8 @@ import Modelo.Movimiento;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +31,7 @@ public class MovimientoDAO implements crudMov {
     @Override
     public List listar() {
         ArrayList<Movimiento> list = new ArrayList<>();
-        String sql = "select*from proyecto.tipo_movimiento";
+        String sql = "select*from TIPO_MOVIMIENTO";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -49,7 +51,7 @@ public class MovimientoDAO implements crudMov {
 
     @Override
     public Movimiento list(int id) {
-        String sql = "select * from proyecto.tipo_movimiento where id_tmov=" + id;
+        String sql = "select * from TIPO_MOVIMIENTO where id_tmov=" + id;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -58,7 +60,6 @@ public class MovimientoDAO implements crudMov {
                 mov.setCodigo(rs.getString("id_tmov"));
                 mov.setNombre(rs.getString("nombre_tmov"));
                 mov.setSigno(rs.getString("signo_tmov"));
-
             }
         } catch (Exception e) {
         }
@@ -67,7 +68,7 @@ public class MovimientoDAO implements crudMov {
 
     @Override
     public boolean add(Movimiento art) {
-        String sql = "insert into proyecto.tipo_movimiento(nombre_tmov, signo_tmov)values('" + art.getNombre() + "','" + art.getSigno() + "')";
+        String sql = "insert into TIPO_MOVIMIENTO(nombre_tmov, signo_tmov)values('" + art.getNombre() + "','" + art.getSigno() + "')";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -81,7 +82,7 @@ public class MovimientoDAO implements crudMov {
 
     @Override
     public boolean edit(Movimiento art) {
-        String sql = "update proyecto.tipo_movimiento set nombre_tmov='" + art.getNombre() + "',signo_tmov='" + art.getSigno() + "'where id_tmov=" + art.getCodigo();
+        String sql = "update TIPO_MOVIMIENTO set nombre_tmov='" + art.getNombre() + "',signo_tmov='" + art.getSigno() + "'where id_tmov=" + art.getCodigo();
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -95,7 +96,7 @@ public class MovimientoDAO implements crudMov {
 
     @Override
     public boolean eliminar(int id) {
-        String sql = "delete from proyecto.tipo_movimiento where id_tmov=" + id;
+        String sql = "delete from TIPO_MOVIMIENTO where id_tmov=" + id;
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -106,4 +107,32 @@ public class MovimientoDAO implements crudMov {
         }
         return false;
     }
+
+    public ArrayList<Movimiento> mostrarMov() {
+        ArrayList<Movimiento> lista = new ArrayList<>();
+        try {
+            String sql = "select * from TIPO_MOVIMIENTO";
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+
+            System.out.println(sql);
+            while (rs.next()) {
+                String cod = rs.getString("id_tmov");
+                String nombre = rs.getString("nombre_tmov");
+                String signo = rs.getString("signo_tmov");
+                Movimiento movd = new Movimiento();
+                movd.setCodigo(cod);
+                movd.setNombre(nombre);
+                movd.setSigno(signo);
+                
+                lista.add(movd);
+            }
+        } catch (Exception e) {
+            System.out.println(e + "listM");
+        }
+
+        return lista;
+    }
+
 }

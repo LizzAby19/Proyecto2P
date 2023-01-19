@@ -21,6 +21,20 @@
         }
     %>
     <body>
+        <div class="container">
+        <br><br>
+        
+        Server Port:
+        <%= request.getServerPort()%><br>
+        Server Name: 
+        <%= request.getServerName()%><br>
+        Host Name: 
+        <%= java.net.InetAddress.getLocalHost().getHostName()%><br>
+        Host Address: 
+        <%= java.net.InetAddress.getLocalHost().getHostAddress()%><br>
+        <br> <br> 
+        
+        </div>
     <center>
         <div class="container-fluid mt-4 col-6" >
             <div class="card " style="background:#C5D2F0 ">
